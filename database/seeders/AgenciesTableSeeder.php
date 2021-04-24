@@ -26,7 +26,7 @@ class AgenciesTableSeeder extends Seeder
                     'name' => 'agencies',
                     'display_name_singular' => 'Agency',
                     'display_name_plural' => 'Agencies',
-                    'icon' => 'voyager-anchor',
+                    'icon' => 'voyager-telephone',
                     'model_name' => 'App\Models\Agency',
                     'policy_name' => '',
                     'controller' => '',
@@ -55,6 +55,23 @@ class AgenciesTableSeeder extends Seeder
             )->save();
         }
 
+        $dataRow = $this->dataRow($agencyDataType, 'user_id');
+        if (!$dataRow->exists) {
+            $dataRow->fill(
+                [
+                    'type' => 'text',
+                    'display_name' => 'User id',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'order' => 2,
+                ]
+            )->save();
+        }
+
         $dataRow = $this->dataRow($agencyDataType, 'agency_belongsto_user_relationship');
         if (!$dataRow->exists) {
             $dataRow->fill([
@@ -74,7 +91,7 @@ class AgenciesTableSeeder extends Seeder
                     'column' => 'user_id',
                     'key' => 'id',
                     'label' => 'name',
-                    'pivot_table' => 'users',
+                    'pivot_table' => 'agencies',
                     'pivot' => '0',
                     'taggable' => '0',
                 ]
@@ -240,7 +257,7 @@ class AgenciesTableSeeder extends Seeder
             $menuItem->fill(
                 [
                     'target' => '_self',
-                    'icon_class' => 'voyager-anchor',
+                    'icon_class' => 'voyager-telephone',
                     'color' => null,
                     'parent_id' => null,
                     'order' => 17,

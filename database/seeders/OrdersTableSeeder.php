@@ -26,7 +26,7 @@ class OrdersTableSeeder extends Seeder
                     'name' => 'orders',
                     'display_name_singular' => 'Order',
                     'display_name_plural' => 'Orders',
-                    'icon' => 'voyager-anchor',
+                    'icon' => 'voyager-calendar',
                     'model_name' => 'App\Models\Order',
                     'policy_name' => '',
                     'controller' => '',
@@ -55,6 +55,23 @@ class OrdersTableSeeder extends Seeder
             )->save();
         }
 
+        $dataRow = $this->dataRow($orderDataType, 'tour_id');
+        if (!$dataRow->exists) {
+            $dataRow->fill(
+                [
+                    'type' => 'text',
+                    'display_name' => 'Tour id',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'order' => 2,
+                ]
+            )->save();
+        }
+
         $dataRow = $this->dataRow($orderDataType, 'order_belongsto_tour_relationship');
         if (!$dataRow->exists) {
             $dataRow->fill([
@@ -74,7 +91,7 @@ class OrdersTableSeeder extends Seeder
                    'column' => 'tour_id',
                    'key' => 'id',
                    'label' => 'title',
-                   'pivot_table' => 'tours',
+                   'pivot_table' => 'orders',
                    'pivot' => '0',
                    'taggable' => '0',
                ]
@@ -198,7 +215,7 @@ class OrdersTableSeeder extends Seeder
             $menuItem->fill(
                 [
                     'target' => '_self',
-                    'icon_class' => 'voyager-anchor',
+                    'icon_class' => 'voyager-calendar',
                     'color' => null,
                     'parent_id' => null,
                     'order' => 18,

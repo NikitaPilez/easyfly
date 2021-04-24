@@ -26,7 +26,7 @@ class ToursTableSeeder extends Seeder
                     'name' => 'tours',
                     'display_name_singular' => 'Tour',
                     'display_name_plural' => 'Tours',
-                    'icon' => 'voyager-anchor',
+                    'icon' => 'voyager-eye',
                     'model_name' => 'App\Models\Tour',
                     'policy_name' => '',
                     'controller' => '',
@@ -55,6 +55,23 @@ class ToursTableSeeder extends Seeder
             )->save();
         }
 
+        $dataRow = $this->dataRow($tourDataType, 'agency_id');
+        if (!$dataRow->exists) {
+            $dataRow->fill(
+                [
+                    'type' => 'text',
+                    'display_name' => 'Agency id',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'order' => 2,
+                ]
+            )->save();
+        }
+
         $dataRow = $this->dataRow($tourDataType, 'tour_belongsto_agency_relationship');
         if (!$dataRow->exists) {
             $dataRow->fill([
@@ -74,7 +91,7 @@ class ToursTableSeeder extends Seeder
                    'column' => 'agency_id',
                    'key' => 'id',
                    'label' => 'name',
-                   'pivot_table' => 'agencies',
+                   'pivot_table' => 'tours',
                    'pivot' => '0',
                    'taggable' => '0',
                ]
@@ -308,7 +325,7 @@ class ToursTableSeeder extends Seeder
             $menuItem->fill(
                 [
                     'target' => '_self',
-                    'icon_class' => 'voyager-anchor',
+                    'icon_class' => 'voyager-eye',
                     'color' => null,
                     'parent_id' => null,
                     'order' => 16,
