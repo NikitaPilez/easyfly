@@ -16,7 +16,7 @@
                     <div class="container">
                         <!--Logo-->
                         <div id="logo">
-                            <a href="#">
+                            <a href="{{ asset('/') }}">
                                 <span class="logo-default">POLO</span>
                                 <span class="logo-dark">POLO</span>
                             </a>
@@ -25,10 +25,9 @@
                             <div class="container">
                                 <nav>
                                     <ul>
-                                        <li><a href="#">Dashboard</a></li>
-                                        <li><a href="#">Dashboard</a></li>
-                                        <li><a href="#">Dashboard</a></li>
-                                        <li><a href="#">Dashboard</a></li>
+                                        <li><a href="{{ asset('contacts') }}">Contacts</a></li>
+                                        <li><a href="{{ asset('services') }}">Services</a></li>
+                                        <li><a href="{{ asset('blog') }}">Blog</a></li>
                                         <li class="dropdown"><a href="#">Pages</a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="#">Login</a></li>
