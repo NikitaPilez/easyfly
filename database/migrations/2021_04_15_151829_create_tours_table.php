@@ -23,10 +23,9 @@ class CreateToursTable extends Migration
             $table->text('city');
             $table->string('image')->nullable();
             $table->string('slug')->unique();
-            $table->enum('status', ['PUBLISHED', 'DRAFT', 'PENDING'])->default('DRAFT');
             $table->timestamps();
 
-            $table->foreign('agency_id')->references('id')->on('agencies');
+            $table->foreign('agency_id')->references('id')->on('agencies')->onDelete('cascade');
         });
     }
 

@@ -166,6 +166,23 @@ class OrdersTableSeeder extends Seeder
             )->save();
         }
 
+        $dataRow = $this->dataRow($orderDataType, 'birthday');
+        if (!$dataRow->exists) {
+            $dataRow->fill(
+                [
+                    'type' => 'timestamp',
+                    'display_name' => 'Birthday',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'order' => 7,
+                ]
+            )->save();
+        }
+
         $dataRow = $this->dataRow($orderDataType, 'created_at');
         if (!$dataRow->exists) {
             $dataRow->fill(

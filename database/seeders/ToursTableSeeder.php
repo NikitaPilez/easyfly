@@ -251,31 +251,6 @@ class ToursTableSeeder extends Seeder
             )->save();
         }
 
-        $dataRow = $this->dataRow($tourDataType, 'status');
-        if (!$dataRow->exists) {
-            $dataRow->fill(
-                [
-                    'type' => 'select_dropdown',
-                    'display_name' => __('voyager::seeders.data_rows.status'),
-                    'required' => 1,
-                    'browse' => 1,
-                    'read' => 1,
-                    'edit' => 1,
-                    'add' => 1,
-                    'delete' => 1,
-                    'details' => [
-                        'default' => 'DRAFT',
-                        'options' => [
-                            'PUBLISHED' => 'published',
-                            'DRAFT' => 'draft',
-                            'PENDING' => 'pending',
-                        ],
-                    ],
-                    'order' => 11,
-                ]
-            )->save();
-        }
-
         $dataRow = $this->dataRow($tourDataType, 'created_at');
         if (!$dataRow->exists) {
             $dataRow->fill(

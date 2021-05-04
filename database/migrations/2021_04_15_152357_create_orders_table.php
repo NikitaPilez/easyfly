@@ -20,9 +20,10 @@ class CreateOrdersTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('email');
+            $table->timestamp('birthday');
             $table->timestamps();
 
-            $table->foreign('tour_id')->references('id')->on('tours');
+            $table->foreign('tour_id')->references('id')->on('tours')->onDelete('cascade');
         });
     }
 
