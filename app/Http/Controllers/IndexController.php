@@ -4,12 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Slider;
+use App\Models\Service;
+use App\Models\Article;
 
 class IndexController extends Controller
 {
     public function index()
     {
-        return view('index.main');
+        $sliders = Slider::get();
+        $services = Service::take(3)->get();
+        $articles = Article::get();
+
+        return view('index.main', [
+            'sliders' => $sliders,
+            'services' => $services,
+            'articles' => $articles,
+        ]);
     }
 
     public function contacts()
@@ -19,6 +30,10 @@ class IndexController extends Controller
 
     public function services()
     {
-        return view('index.services');
+        $services = Service::get();
+
+        return view('index.services', [
+            'services' => $services,
+        ]);
     }
 }
