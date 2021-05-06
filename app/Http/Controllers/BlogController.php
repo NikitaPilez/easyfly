@@ -9,7 +9,7 @@ class BlogController extends Controller
 {
     public function list()
     {
-        $articles = Article::get();
+        $articles = Article::latest()->get();
 
         return view('blog.list', [
             'articles' => $articles,

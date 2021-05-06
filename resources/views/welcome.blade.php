@@ -25,26 +25,29 @@
                     <div class="container">
                         <nav>
                             <ul>
-                                <li><a href="{{ asset('contacts') }}">Contacts</a></li>
-                                <li><a href="{{ asset('services') }}">Services</a></li>
-                                <li><a href="{{ asset('blog') }}">Blog</a></li>
-                                <li class="dropdown"><a href="#">Pages</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Login</a></li>
-                                        <li><a href="#">Register</a></li>
-                                        <li>
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
+                                <li><a href="{{ asset('contacts') }}">Контакты</a></li>
+                                <li><a href="{{ asset('services') }}">Сервисы</a></li>
+                                <li><a href="{{ asset('blog') }}">Блог</a></li>
+                                @if (Auth::check())
+                                    <li class="dropdown"><a href="#">{{Auth::user()->name}}</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                    {{ __('Выход') }}
+                                                </a>
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                @else
+                                    <li><a href="{{ asset('login') }}">Вход</a></li>
+                                    <li><a href="{{ asset('register') }}">Регистрация</a></li>
+                                @endif
                             </ul>
                         </nav>
                     </div>

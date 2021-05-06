@@ -14,7 +14,7 @@ class IndexController extends Controller
     {
         $sliders = Slider::get();
         $services = Service::take(3)->get();
-        $articles = Article::get();
+        $articles = Article::latest()->take(3)->get();
 
         return view('index.main', [
             'sliders' => $sliders,

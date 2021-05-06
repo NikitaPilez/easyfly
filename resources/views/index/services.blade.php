@@ -3,13 +3,13 @@
     <section id="page-title">
         <div class="container">
             <div class="page-title">
-                <h1>Services</h1>
-                <span>Inspiration comes of working every day.</span>
+                <h1>Сервисы</h1>
+                <span>Выбирайте услуги, которые подходят именно вам.</span>
             </div>
             <div class="breadcrumb">
                 <ul>
-                    <li><a href="{{asset ('/') }}">Home</a> </li>
-                    <li class="active"><a href="#">Services</a> </li>
+                    <li><a href="{{asset ('/') }}">Главня</a> </li>
+                    <li class="active"><a href="#">Сервисы</a> </li>
                 </ul>
             </div>
         </div>

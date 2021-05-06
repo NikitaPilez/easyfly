@@ -4,9 +4,8 @@
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="page-title">
-                <span class="post-meta-category"><a href="">{{ $article->title }}</a></span>
-                <h1>{{ $article->excerpt }}</h1>
-                <div class="small m-b-20">{{ $article-> created_at }} | <a href="#">by admin</a> | <a href="#">5 Likes</a></div>
+                <h1>{{ $article->title }}</h1>
+                <div class="small m-b-20">{{ $article-> created_at }}</div>
             </div>
         </div>
     </section>
