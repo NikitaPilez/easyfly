@@ -6,6 +6,7 @@
 
     <title>Laravel</title>
 
+    <link href="{{ asset('css/morris.css') }}" rel="stylesheet">
     <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>

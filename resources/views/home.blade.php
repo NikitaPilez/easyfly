@@ -4,14 +4,7 @@
 <section id="page-title">
     <div class="container">
         <div class="page-title">
-            <h1>Charts</h1>
-            <span>Chartjs Examples</span>
-        </div>
-        <div class="breadcrumb">
-            <ul>
-                <li><a href="#">Home</a> </li>
-                <li class="active"><a href="#">Graphics</a> </li>
-            </ul>
+            <h1>Статистика и аналитика компании</h1>
         </div>
     </div>
 </section>
@@ -19,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="content col-lg-12">
-                <h4>Line Chart</h4>
+                <h4>График демонстрирует сколько заказов поступило на каждый тур в течении нескольких лет.</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <ul class="list list-legend">
@@ -30,7 +23,7 @@
                         <div id="first_graphic"></div>
                     </div>
                 </div>
-                <h4>Bar Chart</h4>
+                <h4>График демонстрирует сколько прибыли заработало агенство на этих турах за последние года.</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <ul class="list list-legend">
@@ -41,13 +34,13 @@
                         <div id="second_graphic"></div>
                     </div>
                 </div>
-                <h4>Two</h4>
+                <h4>График демонстрирует сколько заказов поступило на каждый месяц (за последние года), позволяет узнать какой месяц является самым продаваемым, и наоборот.</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <canvas id="chart-area-1"></canvas>
                     </div>
                 </div>
-                <h4>Three</h4>
+                <h4>График демонстрирует средний возраст клиентов покупающих туры по месяцам.</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <canvas id="canvas"></canvas>
@@ -153,7 +146,7 @@
             },
             title: {
                 display: true,
-                text: 'Chart.js Doughnut Chart'
+                text: ''
             },
             animation: {
                 animateScale: true,
@@ -187,7 +180,7 @@
             responsive: true,
             title: {
                 display: true,
-                text: 'Chart.js Line Chart'
+                text: ''
             },
             tooltips: {
                 mode: 'index',
@@ -202,14 +195,14 @@
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Month'
+                        labelString: 'Месяц'
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'Возраст'
                     },
                     ticks: {
                         min: 10,
