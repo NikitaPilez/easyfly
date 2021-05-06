@@ -8,7 +8,7 @@
                     <div class="bg-overlay"></div>
                     <div class="container">
                         <div class="slide-captions text-center text-light">
-                            <span class="strong">{{ $slider->title }}</span>
+                            <span class="strong">{!! $slider->title !!}</span>
                             <h2 class="text-dark">{!! $slider->body !!}</h2>
                         </div>
                     </div>
