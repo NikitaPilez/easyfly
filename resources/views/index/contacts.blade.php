@@ -4,13 +4,13 @@
 <section id="page-title">
     <div class="container">
         <div class="page-title">
-            <h1>Contacts</h1>
-            <span>Inspiration comes of working every day.</span>
+            <h1>Контакты</h1>
+            <span>Хотите получить подбор тура уже сегодня? Сообщите нам.</span>
         </div>
         <div class="breadcrumb">
             <ul>
-                <li><a href="#">Home</a> </li>
-                <li class="active"><a href="#">Contacts</a></li>
+                <li><a href="{{ asset('/') }}">Главная</a> </li>
+                <li class="active"><a href="#">Контакты</a></li>
             </ul>
         </div>
     </div>
@@ -20,24 +20,24 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="text-uppercase">Get In Touch</h3>
-                <p>The most happiest time of the day!. Suspendisse condimentum porttitor cursus. Duis nec nulla turpis. Nulla lacinia laoreet odio, non lacinia nisl malesuada vel. Aenean malesuada fermentum bibendum.</p>
-                <p>The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                <h3 class="text-uppercase">Свяжитесь с нами</h3>
+                <p>Работаем честно и только так! Каждую поездку оформляем официально, никогда не отказываемся от своих обязательств. Мы всегда готовы оказать помощь нашим клиентам, как до начала путешествия так и во время его. Без проблем можем рассказать, как формируются цены на туры — мы ничего не скрываем от своих клиентов. .</p>
+                <p>Поможем выбрать отдых, который будет полностью отвечать Вашим пожеланиям. Мы не просто подберем оптимальный вариант, но и сделаем все, чтобы Ваше путешествие прошло именно так, как было задумано. Предоставляем только достоверную информацию о гостиницах, сервисе, курортах и перелёте</p>
                 <div class="row m-t-40">
                     <div class="col-lg-6">
                         <address>
-                            <strong>Polo, Inc.</strong><br>
-                            795 Folsom Ave, Suite 600<br>
-                            San Francisco, CA 94107<br>
-                            <abbr title="Phone">P:</h4> (123) 456-7890
+                            <strong>Компания Polo</strong><br>
+                            220234, Россия, г. Москва<br>
+                            Ул. Пушкина, д. 6, корп. 1<br>
+                            <abbr title="Phone">Т:</h4> 8(029) 556-08-45
                         </address>
                     </div>
                     <div class="col-lg-6">
                         <address>
-                            <strong>Polo Office</strong><br>
-                            795 Folsom Ave, Suite 600<br>
-                            San Francisco, CA 94107<br>
-                            <abbr title="Phone">P:</h4> (123) 456-7890
+                            <strong>Офис Polo</strong><br>
+                            212042, Республика Беларусь, г. Минск<br>
+                            Проспект Мурина, д. 86, корп. 3, оф. 544<br>
+                            <abbr title="Phone">Т:</h4> 8(033) 582-94-52
                         </address>
                     </div>
                 </div>

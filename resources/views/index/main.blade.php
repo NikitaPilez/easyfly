@@ -21,8 +21,8 @@
         <section>
             <div class="container">
                 <div class="heading-text heading-section text-center">
-                    <h2>What we do</h2>
-                    <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor cursumus.</p>
+                    <h2>Услуги, которые мы предлагаем</h2>
+                    <p>Выберите услугу, подходящую под решение ваших задач.</p>
                 </div>
                 <div class="row">
                     @foreach($services as $service)
