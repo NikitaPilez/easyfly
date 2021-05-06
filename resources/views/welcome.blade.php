@@ -30,6 +30,7 @@
                                 <li><a href="{{ asset('services') }}">Сервисы</a></li>
                                 <li><a href="{{ asset('blog') }}">Блог</a></li>
                                 @if (Auth::check())
+                                    <li><a href="{{ asset('home') }}">Статистика</a></li>
                                     <li class="dropdown"><a href="#">{{Auth::user()->name}}</a>
                                         <ul class="dropdown-menu">
                                             <li>
