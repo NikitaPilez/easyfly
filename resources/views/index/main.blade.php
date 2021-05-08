@@ -38,14 +38,14 @@
         </section>
     @endisset
 
-    <div class="call-to-action background-image p-t-100 p-b-100" style="background-image:url({{asset('images/parallax.jpg')}})">
+    <div class="call-to-action background-image p-t-100 p-b-100" style="background-image:url({{asset('images/pexels-photo-3435213.jpeg')}})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10">
-                    <h3 class="text-light">Join by April 27 and <span>Win $200</span> in Programs and Services</h3>
-                    <p class="text-light">This is a simple hero unit, a simple call-to-action-style component for calling extra attention to featured content.</p>
+                    <h3 class="text-light">По вопросам консультации обращайтесь в отдел поддержки</h3>
+                    <p class="text-light">Обращайтесь по телефону в рабочее время: 7:00 - 21:00</p>
                 </div>
-                <div class="col-lg-2"> <a class="btn btn-light btn-outline">Call us now!</a> </div>
+                <div class="col-lg-2"> <a class="btn btn-light btn-outline">Контакты</a> </div>
             </div>
         </div>
     </div>

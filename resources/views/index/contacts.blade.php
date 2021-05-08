@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
 
-<section id="page-title">
+<section id="page-title" style="background-image:url({{asset('images/pexels-photo-4051134.jpeg')}})">
     <div class="container">
         <div class="page-title">
             <h1>Контакты</h1>
