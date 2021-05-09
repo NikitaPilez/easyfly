@@ -45,7 +45,7 @@
                     <h3 class="text-light">По вопросам консультации обращайтесь в отдел поддержки</h3>
                     <p class="text-light">Обращайтесь по телефону в рабочее время: 7:00 - 21:00</p>
                 </div>
-                <div class="col-lg-2"> <a class="btn btn-light btn-outline">Контакты</a> </div>
+                <div class="col-lg-2"> <a href="{{asset('/contacts')}}" class="btn btn-light btn-outline">Контакты</a> </div>
             </div>
         </div>
     </div>
