@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Helpers\GraphicHelper;
 use App\Models\Order;
-use App\Models\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -28,8 +28,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $orders = Order::orderBy('created_at')->get();
-        $tours = Tour::all();
+
+        $orders = Cache::remember('orders_graph', 3600, function () {
+            return Order::with(['tour'])
+                ->whereHas('tour', function ($query) {
+                    $query->whereHas('agency', function ($query) {
+                        $query->whereHas('user', function ($query) {
+                            $query->where('id', auth()->user()->id);
+                        });
+                    });
+                })
+                ->orderBy('created_at')
+                ->get();
+        });
+
+        $tours = $orders->map(function($item) {
+            return $item->tour;
+        });
+
+        $tours = $tours->unique();
 
         $gh = new GraphicHelper();
         $colorsConfiguration = $gh->getAvailableColors();

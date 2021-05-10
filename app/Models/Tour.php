@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tour extends Model
 {
     use HasFactory;
+
+    public function agency()
+    {
+        return $this->belongsTo(Agency::class);
+    }
 }

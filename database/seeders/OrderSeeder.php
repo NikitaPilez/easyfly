@@ -16,6 +16,8 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('orders')->truncate();
+
         $tours = Tour::all();
 
         foreach ($tours as $tour) {
