@@ -18,8 +18,8 @@
                 <!--Logo-->
                 <div id="logo">
                     <a href="{{ asset('/') }}">
-                        <span class="logo-default">POLO</span>
-                        <span class="logo-dark">POLO</span>
+                        <span class="logo-default">Tour-Leto</span>
+                        <span class="logo-dark">Tour-Leto</span>
                     </a>
                 </div>
                 <div id="mainMenu">

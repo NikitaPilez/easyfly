@@ -26,7 +26,7 @@
                 <div class="row m-t-40">
                     <div class="col-lg-6">
                         <address>
-                            <strong>Компания Polo</strong><br>
+                            <strong>Компания Tour-Leto</strong><br>
                             220234, Россия, г. Москва<br>
                             Ул. Пушкина, д. 6, корп. 1<br>
                             <abbr title="Phone">Т:</h4> 8(029) 556-08-45
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-lg-6">
                         <address>
-                            <strong>Офис Polo</strong><br>
+                            <strong>Офис Tour-Leto</strong><br>
                             212042, Республика Беларусь, г. Минск<br>
                             Проспект Мурина, д. 86, корп. 3, оф. 544<br>
                             <abbr title="Phone">Т:</h4> 8(033) 582-94-52
