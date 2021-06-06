@@ -1,5 +1,6 @@
 @extends('welcome')
 @section('content')
+{{-- для отображения слайдеров секция   --}}
     @isset($sliders)
         <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-height-xs="360">
             <!-- Slide 1 -->
@@ -16,6 +17,7 @@
             @endforeach
         </div>
     @endisset
+{{-- для отображения услуг секция   --}}
 
     @isset($services)
         <section>
@@ -37,6 +39,7 @@
             </div>
         </section>
     @endisset
+{{-- для отображения контактов секция   --}}
 
     <div class="call-to-action background-image p-t-100 p-b-100" style="background-image:url({{asset('images/pexels-photo-3435213.jpeg')}})">
         <div class="container">
@@ -49,6 +52,7 @@
             </div>
         </div>
     </div>
+{{-- для отображения последних новостей секция   --}}
 
     @isset($articles)
         <section id="page-content" class="sidebar-right">
@@ -79,11 +83,12 @@
             </div>
         </section>
     @endisset
+{{-- для отображения футера секция   --}}
 
     <footer id="footer">
         <div class="copyright-content">
             <div class="container">
-                <div class="copyright-text text-center">&copy; 2019 Tour-Leto - Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="//www.inspiro-media.com" target="_blank" rel="noopener"> INSPIRO</a> </div>
+                <div class="copyright-text text-center">&copy; 2021 Tour-Leto - Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="//www.inspiro-media.com" target="_blank" rel="noopener"> INSPIRO</a> </div>
             </div>
         </div>
     </footer>

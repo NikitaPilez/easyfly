@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\IndexController;
@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// за маршрут / ответственный index controller метод index
 Route::get('/', [IndexController::class, 'index']);
+// за маршрут /services ответственный index controller метод services
 Route::get('/services', [IndexController::class, 'services']);
+// за маршрут /contacts ответственный index controller метод contacts (далее по аналогии)
 Route::get('/contacts', [IndexController::class, 'contacts']);
 Route::get('/blog', [BlogController::class, 'list']);
 Route::get('/blog/{slug}', [BlogController::class, 'item']);
@@ -27,5 +30,5 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Auth::routes();
-
+// за маршрут home ответственный home controoler метод index
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

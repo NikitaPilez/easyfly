@@ -29,6 +29,7 @@ class HomeController extends Controller
     public function index()
     {
 
+        // получаем заказы относящиеся конкретно к этому агенству и его турам и кэшируем запрос
         $orders = Cache::remember('orders_graph', 3600, function () {
             return Order::with(['tour'])
                 ->whereHas('tour', function ($query) {
@@ -42,19 +43,24 @@ class HomeController extends Controller
                 ->get();
         });
 
+        // получаем все туры
         $tours = $orders->map(function($item) {
             return $item->tour;
         });
 
+        // оставляем только уникальные туры
         $tours = $tours->unique();
 
         $gh = new GraphicHelper();
+        // получаем все доступные цвета для графиков
         $colorsConfiguration = $gh->getAvailableColors();
+        // получаем информацию для четырех графиков
         $ordersDataForFirstGraphics = $gh->getDataForFirstGraphics($orders);
         $ordersDataForSecondGraphics = $gh->getDataForSecondGraphics($orders);
         $ordersDataForThirdGraphics = $gh->getDataForThirdGraphics($orders);
         $ordersDataForFourthGraphics = $gh->getDataForFourthGraphics($orders, $tours, $colorsConfiguration);
 
+        // передаем в вью home
         return view('home',[
             'orders' => $orders,
             'ordersDataForFirstGraphicsData' => $ordersDataForFirstGraphics['data'],
